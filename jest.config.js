@@ -3,4 +3,5 @@ module.exports = {
   collectCoverage: true,
   coverageReporters: ['lcov', 'text'],
   testResultsProcessor: 'jest-sonar-reporter',
+  testMatch: ['**/*.test.js'],
 };
