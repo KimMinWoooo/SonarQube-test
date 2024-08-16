@@ -1,36 +1,5 @@
-// This file contains utility functions
-
-// Function with high cognitive complexity (SonarQube should flag this)
-function complexFunction(a, b, c) {
-    if (a > b) {
-      if (b > c) {
-        if (a > c) {
-          return a;
-        } else {
-          return c;
-        }
-      } else {
-        if (a > c) {
-          return a;
-        } else {
-          return c;
-        }
-      }
-    } else {
-      if (b > c) {
-        return b;
-      } else {
-        return c;
-      }
-    }
+function capitalizeString(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
   
-  // Function with security vulnerability (use of eval)
-  function unsafeEval(input) {
-    return eval(input);
-  }
-  
-  module.exports = {
-    complexFunction,
-    unsafeEval
-  };
+  module.exports = { capitalizeString };

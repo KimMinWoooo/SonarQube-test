@@ -1,21 +1,9 @@
-// This file contains math-related functions
+const { add, multiply } = require('./math');
 
-// Function with a bug (division by zero possibility)
-function divide(a, b) {
-    return a / b;  // No check for b being zero
-  }
-  
-  // Correct implementation of addition
-  function add(a, b) {
-    return a + b;
-  }
-  
-  // Unused function (SonarQube should detect this)
-  function multiply(a, b) {
-    return a * b;
-  }
-  
-  module.exports = {
-    divide,
-    add
-  };
+test('adds 1 + 2 to equal 3', () => {
+  expect(add(1, 2)).toBe(3);
+});
+
+test('multiplies 2 * 3 to equal 6', () => {
+  expect(multiply(2, 3)).toBe(6);
+});
